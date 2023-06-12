@@ -6,7 +6,13 @@ const Contact = () => {
     <Nav />
         <h3>Contact us!</h3>
         <Form>
-            <input type="button" />         
+            <label htmlFor="name" >Name:</label>
+            <input type="text" />
+            <label htmlFor="req_type"></label>
+            <select></select>
+            <label htmlFor="req">Request</label>
+            <textarea />
+            <input type="submit" />   
         </Form>
     </>)
 }
