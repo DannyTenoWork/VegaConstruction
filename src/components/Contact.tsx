@@ -1,18 +1,28 @@
 import { Form } from "react-router-dom"
 import Nav from "./Nav"
+import { useState } from "react"
 
 const Contact = () => {
+    const [reqType, setReqType] = useState("siiding");
+    
+
+
     return (<>
     <Nav />
         <h3>Contact us!</h3>
         <Form>
             <label htmlFor="name" >Name:</label>
             <input type="text" />
-            <label htmlFor="req_type"></label>
-            <select></select>
-            <label htmlFor="req">Request</label>
+            <label htmlFor="req_type">Question Type:</label>
+            <select name="selectedReq" value={reqType} onChange={e => setReqType(e.target.value)} >
+                <option value="siding" >Siding</option>
+                <option value="deck" >Deck</option>
+                <option value="other" >Other</option>
+            </select>
+            <label htmlFor="req">Request: </label>
             <textarea />
-            <input type="submit" />   
+            <input type="submit" />
+            {reqType === "siding"? <label></label> : null}
         </Form>
     </>)
 }
