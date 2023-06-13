@@ -3,7 +3,7 @@ import Nav from "./Nav"
 import { useState } from "react"
 
 const Contact = () => {
-    const [reqType, setReqType] = useState("siiding");
+    const [reqType, setReqType] = useState("siding");
     
 
 
@@ -22,7 +22,7 @@ const Contact = () => {
             <label htmlFor="req">Request: </label>
             <textarea />
             <input type="submit" />
-            {reqType === "siding"? <label></label> : null}
+            {reqType === "siding"? <label>Siding</label> : null}
         </Form>
     </>)
 }
